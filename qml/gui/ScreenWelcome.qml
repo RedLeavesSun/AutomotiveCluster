@@ -59,10 +59,11 @@ Item {
 
     Text {
         id: welcomeText
-        x: 600 / 1280 * rootScreen.width
-        y: 185 / 480 * rootScreen.height
+        x: (parent.width - welcomeText.width) / 2
+        y: (parent.height - welcomeText.height) / 2
         text: qsTr("Welcome..")
-        font.pixelSize: 18
+        font.pixelSize: 72
+        color: "white"
     }
 
   

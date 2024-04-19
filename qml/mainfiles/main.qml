@@ -10,8 +10,8 @@ import ClusterDemo 1.0
 
 Window {
     id: rootScreen
-    width: 1920
-    height: 720
+    width: 1280
+    height: 480
     title: qsTr("HMI Cluster")
     visible: true
     color: "#000000"
