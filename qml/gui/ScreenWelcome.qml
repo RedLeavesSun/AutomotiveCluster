@@ -16,8 +16,8 @@ Item {
 
     Image {
         id: rootBg
-        width: 1280
-        height: 480
+        width: rootScreen.width
+        height: rootScreen.height
         source: "qrc:/images/car_bg"
         opacity: 0.1
         z: -1
@@ -59,8 +59,8 @@ Item {
 
     Text {
         id: welcomeText
-        x: 600
-        y: 185
+        x: 600 / 1280 * rootScreen.width
+        y: 185 / 480 * rootScreen.height
         text: qsTr("Welcome..")
         font.pixelSize: 18
     }

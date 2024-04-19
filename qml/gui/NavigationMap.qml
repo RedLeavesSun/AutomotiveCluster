@@ -4,8 +4,8 @@ import QtPositioning 5.6
 
 Rectangle {
 
-    width: 360
-    height: 260
+    width: 360 / 1280 * rootScreen.width
+    height: 260 / 480 * rootScreen.height
     border.color: "transparent"
     border.width: 5
     radius: 10

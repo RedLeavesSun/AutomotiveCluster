@@ -19,8 +19,8 @@ Item {
 
         Text {
             id: text1
-            x: 1058
-            y: 18
+            x: 1058 / 1280 * rootScreen.width
+            y: 18 / 480 * rootScreen.height
             text: "Charge: %"
             font.pixelSize: 18
             color: "white"
@@ -28,8 +28,8 @@ Item {
 
         Text {
             id: chargeCount
-            x: 1143
-            y: 18
+            x: 1143 / 1280 * rootScreen.width
+            y: 18 / 480 * rootScreen.height
             text: "15"
             font.pixelSize: 18
             color: "white"
@@ -40,18 +40,18 @@ Item {
 
     Image {
         id:battery
-        x: 435
-        y: -140 // -120 centered
+        x: 435 / 1280 * rootScreen.width
+        y: -140 / 480 * rootScreen.height // -120 centered
         source: "qrc:/images/battery.png"
         height: background.height
         rotation: 90
 
         ChargeBlock {
             id: chargeBlock1
-            x: 28
-            y: 553
-            width: 356
-            height: 132
+            x: 28 / 1280 * rootScreen.width
+            y: 553 / 480 * rootScreen.height
+            width: 356 / 1280 * rootScreen.width
+            height: 132 / 480 * rootScreen.height
             source: "qrc:/images/battery_label.png"
             fillMode: Image.PreserveAspectFit
             visibleIfChargeMoreThan: -1
@@ -61,10 +61,10 @@ Item {
 
         ChargeBlock {
             id: chargeBlock2
-            x: 28
-            y: 422
-            width: 356
-            height: 132
+            x: 28 / 1280 * rootScreen.width
+            y: 422 / 480 * rootScreen.height
+            width: 356 / 1280 * rootScreen.width
+            height: 132 / 480 * rootScreen.height
             source: "qrc:/images/battery_label.png"
             fillMode: Image.PreserveAspectFit
             visibleIfChargeMoreThan: 20
@@ -73,10 +73,10 @@ Item {
 
         ChargeBlock {
             id: chargeBlock3
-            x: 28
-            y: 294
-            width: 356
-            height: 132
+            x: 28 / 1280 * rootScreen.width
+            y: 294 / 480 * rootScreen.height
+            width: 356 / 1280 * rootScreen.width
+            height: 132 / 480 * rootScreen.height
             source: "qrc:/images/battery_label.png"
             fillMode: Image.PreserveAspectFit
             visibleIfChargeMoreThan: 40
@@ -85,10 +85,10 @@ Item {
 
         ChargeBlock {
             id: chargeBlock4
-            x: 28
-            y: 163
-            width: 356
-            height: 132
+            x: 28 / 1280 * rootScreen.width
+            y: 163 / 480 * rootScreen.height
+            width: 356 / 1280 * rootScreen.width
+            height: 132 / 480 * rootScreen.height
             source: "qrc:/images/battery_label.png"
             fillMode: Image.PreserveAspectFit
             visibleIfChargeMoreThan: 60
@@ -97,10 +97,10 @@ Item {
 
         ChargeBlock {
             id: chargeBlock5
-            x: 28
-            y: 78
-            width: 356
-            height: 132
+            x: 28 / 1280 * rootScreen.width
+            y: 78 / 480 * rootScreen.height
+            width: 356 / 1280 * rootScreen.width
+            height: 132 / 480 * rootScreen.height
             source: "qrc:/images/battery_label.png"
             fillMode: Image.PreserveAspectFit
             visibleIfChargeMoreThan: 80

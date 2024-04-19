@@ -8,50 +8,50 @@ Item {
     //visible: !playerView.musicEnabled
     Image {
         id: car
-        x: 555
-        y: 120
-        width: 140
-        height: 211
+        x: 555 / 1280 * rootScreen.width
+        y: 120 / 480 * rootScreen.height
+        width: 140 / 1280 * rootScreen.width
+        height: 211 / 480 * rootScreen.height
         source: "qrc:/images/car_body.png"
         fillMode: Image.PreserveAspectFit
     }
 
     Image {
         id: tierLeftFront
-        x: 547
-        y: 154
-        width: 45
-        height: 43
+        x: 547 / 1280 * rootScreen.width
+        y: 154 / 480 * rootScreen.height
+        width: 45 / 1280 * rootScreen.width
+        height: 43 / 480 * rootScreen.height
         source: "qrc:/images/car_tier.png"
         fillMode: Image.PreserveAspectFit
     }
 
     Image {
         id: tierLeftBack
-        x: 547
-        y: 283
-        width: 45
-        height: 43
+        x: 547 / 1280 * rootScreen.width
+        y: 283 / 480 * rootScreen.height
+        width: 45 / 1280 * rootScreen.width
+        height: 43 / 480 * rootScreen.height
         source: "qrc:/images/car_tier.png"
         fillMode: Image.PreserveAspectFit
     }
 
     Image {
         id: tierRightBack
-        x: 660
-        y: 283
-        width: 45
-        height: 43
+        x: 660 / 1280 * rootScreen.width
+        y: 283 / 480 * rootScreen.height
+        width: 45 / 1280 * rootScreen.width
+        height: 43 / 480 * rootScreen.height
         source: "qrc:/images/car_tier.png"
         fillMode: Image.PreserveAspectFit
     }
 
     Image {
         id: tierRightFront
-        x: 660
-        y: 154
-        width: 45
-        height: 43
+        x: 660 / 1280 * rootScreen.width
+        y: 154 / 480 * rootScreen.height
+        width: 45 / 1280 * rootScreen.width
+        height: 43 / 480 * rootScreen.height
         source: "qrc:/images/car_tier.png"
         fillMode: Image.PreserveAspectFit
 
@@ -68,43 +68,43 @@ Item {
 
     Text {
         id: text1
-        x: 504
-        y: 298
+        x: 504 / 1280 * rootScreen.width
+        y: 298 / 480 * rootScreen.height
         color: "white"
-        width: 45
-        height: 28
+        width: 45 / 1280 * rootScreen.width
+        height: 28 / 480 * rootScreen.height
         text: qsTr("30 psi")
         font.pixelSize: 12
     }
 
     Text {
         id: text2
-        x: 504
-        y: 163
+        x: 504 / 1280 * rootScreen.width
+        y: 163 / 480 * rootScreen.height
         color: "white"
-        width: 45
-        height: 28
+        width: 45 / 1280 * rootScreen.width
+        height: 28 / 480 * rootScreen.height
         text: qsTr("30 psi")
         font.pixelSize: 12
     }
 
     Text {
         id: tierRightBackText
-        x: 715
-        y: 298
+        x: 715 / 1280 * rootScreen.width
+        y: 298 / 480 * rootScreen.height
         color: "white"
-        width: 45
-        height: 28
+        width: 45 / 1280 * rootScreen.width
+        height: 28 / 480 * rootScreen.height
         text: qsTr("34 psi")
         font.pixelSize: 12
     }
 
     Text {
         id: tierRightFrontText
-        x: 715
-        y: 169
-        width: 45
-        height: 28
+        x: 715 / 1280 * rootScreen.width
+        y: 169 / 480 * rootScreen.height
+        width: 45 / 1280 * rootScreen.width
+        height: 28 / 480 * rootScreen.height
         text: "45 psi"
         font.pixelSize: 12
         color: {

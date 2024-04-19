@@ -131,8 +131,8 @@ Item {
     
     Footer {
         id: footerId
-        x: 372
-        y: 390
+        x: 372 / 1280 * rootScreen.width
+        y: 390 / 480 * rootScreen.width
         color: "transparent"
 
     }

@@ -17,6 +17,8 @@ Item {
     Image {
 
         id:mask
+        width: rootScreen.width
+        height: rootScreen.height
         source: "qrc:/images/DashboardFrameSport-mask.png"
         focus: true
         Component.onCompleted: {
@@ -43,29 +45,29 @@ Item {
                 property real minValueAngle: -179
                 property real degreesPerValue: Math.abs((minValueAngle - maxValueAngle) / speedometer.maximumValue)
                 id: speedometer
-                x: 47
-                y: 62
-                width: 383
-                height: 390
+                x: 47 / 1280 * rootScreen.width
+                y: 62 / 480 * rootScreen.height
+                width: 383 / 1280 * rootScreen.width
+                height: 390 / 480 * rootScreen.height
                 source: "qrc:/images/Gauge_Speed.png"
                 fillMode: Image.PreserveAspectFit
 
                 Text {
                     id: speedText
-                    x: 169
-                    y: 117
-                    width: 46
-                    height: 33
+                    x: 169 / 1280 * rootScreen.width
+                    y: 117 / 480 * rootScreen.height
+                    width: 46 / 1280 * rootScreen.width
+                    height: 33 / 480 * rootScreen.height
                     text:  speedometer.value.toString()
                     color: "white"
                     font.pixelSize: 32
                 }
 
                 Text {
-                    x: 163
-                    y: 169
-                    width: 57
-                    height: 31
+                    x: 163 / 1280 * rootScreen.width
+                    y: 169 / 480 * rootScreen.height
+                    width: 57 / 1280 * rootScreen.width
+                    height: 31 / 480 * rootScreen.height
                     text: qsTr("km/h")
                     color: "white"
                     font.pixelSize: 30
@@ -107,10 +109,10 @@ Item {
 
             Picture {
                 id: fuelWarning
-                x: 275
-                y: 269
-                width: 51
-                height: 44
+                x: 275 / 1280 * rootScreen.width
+                y: 269 / 480 * rootScreen.height
+                width: 51 / 1280 * rootScreen.width
+                height: 44 / 480 * rootScreen.height
                 source: "qrc:/iso-icons/iso_grs_7000_4_0245.dat"
 
 
@@ -126,10 +128,10 @@ Item {
 
             Picture {
                 id: seatBelt
-                x: 146
-                y: 269
-                width: 57
-                height: 52
+                x: 146 / 1280 * rootScreen.width
+                y: 269 / 480 * rootScreen.height
+                width: 57 / 1280 * rootScreen.width
+                height: 52 / 480 * rootScreen.height
                 source: "qrc:/iso-icons/iso_grs_7000_4_0249.dat"
             }
 
@@ -161,10 +163,10 @@ Item {
             Item {
                 Image {
                     id: bg
-                    x: 849
-                    y: 62
-                    width: 383
-                    height: 390
+                    x: 849 / 1280 * rootScreen.width
+                    y: 62 / 480 * rootScreen.height
+                    width: 383 / 1280 * rootScreen.width
+                    height: 390 / 480 * rootScreen.height
                     source: "qrc:/images/Gauge_RPM.png"
                     fillMode: Image.PreserveAspectFit
 
@@ -216,8 +218,8 @@ Item {
 
                    Text {
                         id: topText
-                        x: 182
-                        y: 136
+                        x: 182 / 1280 * rootScreen.width
+                        y: 136 / 480 * rootScreen.height
                         text: "0"
                         color: "white"
                         font.pixelSize: 36
@@ -226,10 +228,10 @@ Item {
 
                 Picture {
                     id: engineTempWarning
-                    x: 974
-                    y: 262
-                    width: 48
-                    height: 36
+                    x: 974 / 1280 * rootScreen.width
+                    y: 262 / 480 * rootScreen.height
+                    width: 48 / 1280 * rootScreen.width
+                    height: 36 / 480 * rootScreen.height
                     source: "qrc:/iso-icons/iso_grs_7000_4_0246.dat"
                     visible: true
                 }
@@ -257,10 +259,10 @@ Item {
 
                 Picture {
                     id: batteryWarning
-                    x: 1057
-                    y: 258
-                    width: 47
-                    height: 40
+                    x: 1057 / 1280 * rootScreen.width
+                    y: 258 / 480 * rootScreen.height
+                    width: 47 / 1280 * rootScreen.width
+                    height: 40 / 480 * rootScreen.height
                     source: "qrc:/iso-icons/iso_grs_7000_4_0247.dat"
 
                 }
@@ -283,10 +285,10 @@ Item {
         Item {
             Picture {
                 id: highBeam
-                x: 517
-                y: 27
-                width: 52
-                height: 42
+                x: 517 / 1280 * rootScreen.width
+                y: 27 / 480 * rootScreen.height
+                width: 52 / 1280 * rootScreen.width
+                height: 42 / 480 * rootScreen.height
                 source: "qrc:/iso-icons/iso_grs_7000_4_0083.dat"
                 color: "#120ee8"
 
@@ -302,19 +304,19 @@ Item {
 
             Image {
                 id: turnLeft
-                x: 427
-                y: 31
-                width: 46
-                height: 38
+                x: 427 / 1280 * rootScreen.width
+                y: 31 / 480 * rootScreen.height
+                width: 46 / 1280 * rootScreen.width
+                height: 38 / 480 * rootScreen.height
                 source: "qrc:/images/Icon_TurnLeft_OFF.png"
                 fillMode: Image.PreserveAspectFit
             }
             Image {
                 id: turnRight
-                x: 799
-                y: 32
-                width: 59
-                height: 37
+                x: 799 / 1280 * rootScreen.width
+                y: 32 / 480 * rootScreen.height
+                width: 59 / 1280 * rootScreen.width
+                height: 37 / 480 * rootScreen.height
                 source: "qrc:/images/Icon_TurnLeft_OFF.png"
                 mirror: true
                 fillMode: Image.PreserveAspectFit
@@ -322,10 +324,10 @@ Item {
 
             Picture {
                 id: brakeWarnSignal
-                x: 655
-                y: 25
-                width: 53
-                height: 48
+                x: 655 / 1280 * rootScreen.width
+                y: 25 / 480 * rootScreen.height
+                width: 53 / 1280 * rootScreen.width
+                height: 48 / 480 * rootScreen.height
                 source: "qrc:/iso-icons/iso_grs_7000_4_0238.dat"
             }
             Colorize {
@@ -339,10 +341,10 @@ Item {
 
             Picture {
                 id: lowBeam
-                x: 590
-                y: 27
-                width: 53
-                height: 44
+                x: 590 / 1280 * rootScreen.width
+                y: 27 / 480 * rootScreen.height
+                width: 53 / 1280 * rootScreen.width
+                height: 44 / 480 * rootScreen.height
                 source: "qrc:/iso-icons/iso_grs_7000_4_0456.dat"
 
 
@@ -357,10 +359,10 @@ Item {
 
             Picture {
                 id: engineFailure
-                x: 719
-                y: 28
-                width: 44
-                height: 45
+                x: 719 / 1280 * rootScreen.width
+                y: 28 / 480 * rootScreen.height
+                width: 44 / 1280 * rootScreen.width
+                height: 45 / 480 * rootScreen.height
                 source: "qrc:/iso-icons/iso_grs_7000_4_0248.dat"
                 rotation: 0.018
             }
@@ -392,10 +394,10 @@ Item {
 
             Image {
                 id: musicCover
-                x: 577
-                y: 178
-                width: 131
-                height: 124
+                x: 577 / 1280 * rootScreen.width
+                y: 178 / 480 * rootScreen.height
+                width: 131 / 1280 * rootScreen.width
+                height: 124 / 480 * rootScreen.height
                 source: "qrc:/images/MusicPlayer_Cover.png"
                 fillMode: Image.PreserveAspectFit
                 visible: playerView.musicEnabled
@@ -410,8 +412,8 @@ Item {
 
             Text {
                 id: text3
-                x: 582
-                y: 316
+                x: 582 / 1280 * rootScreen.width
+                y: 316 / 480 * rootScreen.height
                 text: "Tonight's the Night\n (Gonna Be Alrigth)\n ROD STEWART"
                 color: "white"
                 font.pixelSize: 14
@@ -488,8 +490,8 @@ Item {
         NavigationMap {
            id: mapId
            visible: true
-           x: 465
-           y: 100
+           x: 465 / 1280 * rootScreen.width
+           y: 100 / 480 * rootScreen.height
 
         }
 
