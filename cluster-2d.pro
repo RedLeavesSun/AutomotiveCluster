@@ -1,12 +1,12 @@
 TEMPLATE = app
-TARGET = automotive-cluster-2d
+TARGET = cluster-2d
 INCLUDEPATH += cpp/headers
 
 HEADERS += cpp/headers/*.h
 SOURCES += cpp/sources/*.cpp
 
 RESOURCES += \
-    automotive-cluster-2d.qrc \
+    cluster-2d.qrc \
     qml/mainfiles/mainfiles.qrc \
     qml/gui.qrc
 

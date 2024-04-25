@@ -1,4 +1,4 @@
-# automotive-cluster-2d
+# cluster-2d
 
 ### Contents
 
