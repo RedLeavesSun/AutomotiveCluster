@@ -1,8 +1,6 @@
-import QtQuick 2.9
-import QtQuick.Window 2.12
-import QtQuick.Extras 1.4
-import QtQuick.Controls 1.4
-import QtQuick.Controls.Styles 1.4
+import QtQuick
+import QtQuick.Window
+import QtQuick.Controls
 
 Item {
     width: rootBg.width

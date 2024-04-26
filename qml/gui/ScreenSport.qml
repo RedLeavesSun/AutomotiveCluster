@@ -1,11 +1,10 @@
-import QtQuick 2.9
-import QtQuick.Window 2.12
-import QtQuick.Extras 1.4
-import QtQuick.Controls 1.4
-import QtQuick.Controls.Styles 1.4
-import QtGraphicalEffects 1.12
+import QtQuick
+import QtQuick.Window
+import QtQuick.Controls
+import Qt5Compat.GraphicalEffects
+
 import "../functions.js" as Functions
-import ClusterDemo 1.0
+import ClusterDemo
 
 
 
@@ -107,7 +106,7 @@ Item {
                 }
             }
 
-            Picture {
+            Image {
                 id: fuelWarning
                 x: 275 / 1280 * rootScreen.width
                 y: 269 / 480 * rootScreen.height
@@ -126,7 +125,7 @@ Item {
                 lightness: 0.6
             }
 
-            Picture {
+            Image {
                 id: seatBelt
                 x: 146 / 1280 * rootScreen.width
                 y: 269 / 480 * rootScreen.height
@@ -226,7 +225,7 @@ Item {
                         }
                     }
 
-                Picture {
+                Image {
                     id: engineTempWarning
                     x: 974 / 1280 * rootScreen.width
                     y: 262 / 480 * rootScreen.height
@@ -257,7 +256,7 @@ Item {
                     }
 
 
-                Picture {
+                Image {
                     id: batteryWarning
                     x: 1057 / 1280 * rootScreen.width
                     y: 258 / 480 * rootScreen.height
@@ -283,24 +282,26 @@ Item {
 
         // Signal Bar
         Item {
-            Picture {
+            Image {
                 id: highBeam
                 x: 517 / 1280 * rootScreen.width
                 y: 27 / 480 * rootScreen.height
                 width: 52 / 1280 * rootScreen.width
                 height: 42 / 480 * rootScreen.height
                 source: "qrc:/iso-icons/iso_grs_7000_4_0083.dat"
-                color: "#120ee8"
+            }
 
-
-                ColorAnimation on color {
+            ColorOverlay {
+                ColorAnimation on color{
                     from: "#120ee8"
                     to: "#222324"
                     duration: 1500
                     loops: Animation.Infinite
                 }
+                id: highBeamColorOverlay
+                anchors.fill: highBeam
+                source: highBeam
             }
-
 
             Image {
                 id: turnLeft
@@ -322,7 +323,7 @@ Item {
                 fillMode: Image.PreserveAspectFit
             }
 
-            Picture {
+            Image {
                 id: brakeWarnSignal
                 x: 655 / 1280 * rootScreen.width
                 y: 25 / 480 * rootScreen.height
@@ -339,25 +340,28 @@ Item {
                 lightness: 0.6
             }
 
-            Picture {
+            Image {
                 id: lowBeam
                 x: 590 / 1280 * rootScreen.width
                 y: 27 / 480 * rootScreen.height
                 width: 53 / 1280 * rootScreen.width
                 height: 44 / 480 * rootScreen.height
                 source: "qrc:/iso-icons/iso_grs_7000_4_0456.dat"
+            }
 
-
+            ColorOverlay {
                 ColorAnimation on color {
                     from: "#0d9e1b"
                     to: "#222324"
                     duration: 2000
                     loops: Animation.Infinite
                 }
+                id: lowBeamColorOverlay
+                anchors.fill: lowBeam
+                source: lowBeam
             }
 
-
-            Picture {
+            Image {
                 id: engineFailure
                 x: 719 / 1280 * rootScreen.width
                 y: 28 / 480 * rootScreen.height

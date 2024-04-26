@@ -1,12 +1,10 @@
-import QtQuick 2.9
-import QtQuick.Window 2.12
-import QtQuick.Extras 1.4
-import QtQuick.Controls 2.0
-import QtQuick.Controls.Styles 1.4
-import QtGraphicalEffects 1.12
+import QtQuick
+import QtQuick.Window
+import QtQuick.Controls
+import Qt5Compat.GraphicalEffects
 
 import "functions.js" as Functions
-import ClusterDemo 1.0
+import ClusterDemo
 
 Window {
     id: rootScreen

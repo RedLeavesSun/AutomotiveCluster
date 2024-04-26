@@ -1,11 +1,11 @@
-import QtQuick 2.2
-import QtMultimedia 5.0
-import QtQuick.Controls 2.12
+import QtQuick
+import QtMultimedia
+import QtQuick.Controls
 
 Item {
 
     id: motoramaRoot
-    property string currentScreen: null
+    property string currentScreen: ""
     property bool isHangOnState: false
     property bool isPowerOff: false
     property bool driveEnabled: false
@@ -40,14 +40,14 @@ Item {
 
     Connections {
         target: motoramaRoot
-        onIsPowerOffChanged:{
+        function onIsPowerOffChanged() {
             if(isPowerOff) powerOff();
 
         }
-        onDriveEnabledChanged:{
+        function onDriveEnabledChanged() {
             checkAndUpdateScreen();
         }
-        onChargeEnabledChanged:{
+        function onChargeEnabledChanged() {
             checkAndUpdateScreen();
         }
     }
